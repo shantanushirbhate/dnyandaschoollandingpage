@@ -1,6 +1,6 @@
 // import { useState } from 'react'
 import NavBar from "./component/navbar/navbar"
-import Hero from "./component/Hero/hero"
+import Herooo from "./component/herooo/herooo"
 import Programs from "./component/programs/programs"
 import Services from "./component/services/services"
 import Learning from "./component/Learning/learning"
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <Hero />
+      <Herooo />
       <Programs />
       <Services />
       <Learning/>

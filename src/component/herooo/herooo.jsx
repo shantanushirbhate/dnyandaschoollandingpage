@@ -59,7 +59,7 @@ const ABCDAnimation = () => {
 
 
 
-export default function Hero() {
+export default function Herooo() {
   const [showWelcome, setShowWelcome] = useState(true);
 
   useEffect(() => {

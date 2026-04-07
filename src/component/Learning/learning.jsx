@@ -3,6 +3,7 @@
 import React from "react";
 import { Box, Typography, Container } from "@mui/material";
 import { motion } from "framer-motion";
+import UndrawImage from "../../assets/undraw_teaching_58yg.png"
 
 export default function Learning() {
   return (
@@ -104,7 +105,7 @@ export default function Learning() {
           >
             <Box
               component={motion.img}
-              src="/src/assets/undraw_teaching_58yg.png"
+              src={ UndrawImage}
               alt="Learning"
               animate={{
                 y: [0, -10, 0], // 👈 floating effect
