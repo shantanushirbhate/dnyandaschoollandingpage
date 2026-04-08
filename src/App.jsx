@@ -6,6 +6,9 @@ import Services from "./component/services/services"
 import Learning from "./component/Learning/learning"
 import Aboutus from "./component/aboutus/aboutus"
 import Saftey from "./component/saftey/saftey"
+import Contact from "./component/contactus/contactus"
+import Testimonials from "./component/testimonials/testimonials"
+import Footer from "./component/footer/footer"
 
 
 function App() {
@@ -18,7 +21,10 @@ function App() {
       <Services />
       <Learning />
       <Aboutus />
-      <Saftey/>
+      <Saftey />
+      <Contact />
+      <Testimonials />
+      <Footer/>
     </>
   )
 }
