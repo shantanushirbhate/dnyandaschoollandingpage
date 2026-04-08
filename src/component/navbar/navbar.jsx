@@ -11,8 +11,29 @@ import Logo from "../../assets/schoollogo.png";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
+  const colors = ["#c20d0d", "#ff7f00", "#ffff00", "#00ff00"];
+  
+ const navItems = [
+  { label: "Home", id: "home" },
+  { label: "Services", id: "services" },
+  { label: "About", id: "about" },
+  { label: "Contact", id: "contact" },
+  ];
+const handleScroll = (id) => {
+  const section = document.getElementById(id);
 
-  const navItems = ["Home", "Services", "About", "Contact"];
+  if (section) {
+    const yOffset = -80; // 👈 navbar height
+    const y =
+      section.getBoundingClientRect().top +
+      window.pageYOffset +
+      yOffset;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+
+  setOpen(false);
+};
 
   return (
     <>
@@ -45,19 +66,38 @@ export default function NavBar() {
     gap: "5px",
   }}
 >
-  {["Dnyanda", "Global", "Pre", "School"].map((word, i) => (
-    <Box
-      key={i}
-      component="span"
-      sx={{
-        opacity: 0,
-        animation: "fadeSlideUp 0.8s ease forwards",
-        animationDelay: `${i * 0.2}s`, // 👈 delay each word
-      }}
-    >
-      {word}
-    </Box>
-  ))}
+{["Dnyanda", "Global", "Pre", "School"].map((word, i) => (
+  <Box
+    key={i}
+    component="span"
+    sx={{
+      opacity: 0,
+      color: colors[i % colors.length],
+      animation: "fadeSlideUp 0.8s ease forwards",
+      animationDelay: `${i * 0.2}s`,
+      fontWeight: "bold",
+
+      // ✅ Responsive font size
+      fontSize: {
+        xs: "1.2rem",   // mobile
+        sm: "1.5rem",   // small tablets
+        md: "2rem",     // desktop
+        lg: "2.5rem",   // large screens
+      },
+
+      // ✅ Responsive spacing
+      mr: {
+        xs: 0.5,
+        sm: 1,
+      },
+
+      // ✅ Better wrapping on mobile
+      display: "inline-block",
+    }}
+  >
+    {word}
+  </Box>
+))}
 </Typography>
         </Box>
 
@@ -69,17 +109,18 @@ export default function NavBar() {
             alignItems: "center",
           }}
         >
-          {navItems.map((item) => (
-            <Typography
-              key={item}
-              sx={{
-                cursor: "pointer",
-                "&:hover": { color: "#FFD93D" },
-              }}
-            >
-              {item}
-            </Typography>
-          ))}
+      {navItems.map((item) => (
+  <Typography
+    key={item.id}
+    onClick={() => handleScroll(item.id)}
+    sx={{
+      cursor: "pointer",
+      "&:hover": { color: "#FFD93D" },
+    }}
+  >
+    {item.label}
+  </Typography>
+))}
 
           <Button
             variant="contained"
@@ -115,18 +156,18 @@ export default function NavBar() {
             gap: 3,
           }}
         >
-          {navItems.map((item) => (
-            <Typography
-              key={item}
-              sx={{
-                fontSize: "18px",
-                cursor: "pointer",
-              }}
-              onClick={() => setOpen(false)}
-            >
-              {item}
-            </Typography>
-          ))}
+        {navItems.map((item) => (
+  <Typography
+    key={item.id}
+    onClick={() => handleScroll(item.id)}
+    sx={{
+      cursor: "pointer",
+      "&:hover": { color: "#FFD93D" },
+    }}
+  >
+    {item.label}
+  </Typography>
+))}
 
           <Button
             variant="contained"

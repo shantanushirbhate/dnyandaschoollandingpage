@@ -16,13 +16,13 @@ function App() {
   return (
     <>
       <NavBar />
-      <Herooo />
+      <Herooo id="home" />
       <Programs />
-      <Services />
+      <Services id="services" />
       <Learning />
-      <Aboutus />
+      <Aboutus id="about" />
       <Saftey />
-      <Contact />
+      <Contact id="contact" />
       <Testimonials />
       <Footer/>
     </>
