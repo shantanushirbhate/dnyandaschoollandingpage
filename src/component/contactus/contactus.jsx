@@ -16,7 +16,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { motion } from "framer-motion";
 
-export default function Contact() {
+export default function Contact({ id }) {
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -38,7 +38,7 @@ export default function Contact() {
   };
 
   return (
-    <Box sx={{ py: 10, px: 3, background: "#f9fbfd" }}>
+    <Box id={id} sx={{ py: 10, px: 3, background: "#f9fbfd" }}>
       {/* Heading */}
       <Typography
         variant="h4"
@@ -205,11 +205,13 @@ export default function Contact() {
         >
           <iframe
             title="map"
-             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3580.010432208136!2d77.76887537507925!3d20.97100798066397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sVrundavan%20Colony%2C%20Siddhivinayak%20Nagar%2C%20Shegaon%20Rahatgaon%20Road%2C%20Amravati%20!5e1!3m2!1sen!2sin!4v1775653326395!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.0468444770586!2d77.76162699678952!3d20.969487500000028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a3ecfea05acd%3A0x163a4c0772082218!2sVrindavan%20Colony%20Garden%2C%20Siddhivinayak%20Nagar%2C%20Amravati%20gorle!5e1!3m2!1sen!2sin!4v1775714285119!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
             loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
           />
         </Box>
       </Box>

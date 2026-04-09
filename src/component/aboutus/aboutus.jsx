@@ -7,9 +7,10 @@ import { motion } from "framer-motion";
 import SchoolImage from "../../assets/boy.png"
 
 
-export default function Aboutus() {
+export default function Aboutus({id}) {
   return (
     <Box
+      id={id}
       sx={{
         py: { xs: 6, md: 10 },
         px: 2,

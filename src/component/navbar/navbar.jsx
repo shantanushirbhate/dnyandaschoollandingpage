@@ -42,7 +42,7 @@ const handleScroll = (id) => {
         sx={{
            right: 0,
           height: "80px",
-          position: "absolute",   // 🔥 makes it overlay Hero
+          position: "fixed",   // 🔥 makes it overlay Hero
           top: 0,
           left: 0,
           zIndex: 10,
@@ -123,6 +123,7 @@ const handleScroll = (id) => {
 ))}
 
           <Button
+              onClick={() => handleScroll("contact")}   
             variant="contained"
             sx={{
               backgroundColor: "#FFD93D",
@@ -170,6 +171,7 @@ const handleScroll = (id) => {
 ))}
 
           <Button
+              onClick={() => handleScroll("contact")}   
             variant="contained"
             sx={{
               backgroundColor: "#FFD93D",

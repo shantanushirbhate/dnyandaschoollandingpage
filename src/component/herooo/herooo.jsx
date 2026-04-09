@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import HeroImage from "../../assets/xjyy_c6n5_210617.jpg";
 
+import Brochure from "../../assets/broucher.jpeg"
+
 import Boy from "../../assets/boy.png"
 import Girl from "../../assets/girl.png"
 
@@ -59,8 +61,16 @@ const ABCDAnimation = () => {
 
 
 
-export default function Herooo() {
+export default function Herooo({id}) {
   const [showWelcome, setShowWelcome] = useState(true);
+
+  const handleScrollToContact = () => {
+  const section = document.getElementById("contact");
+
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -103,7 +113,7 @@ export default function Herooo() {
           </Typography>
         </Box>
       )}
-      <Box
+      <Box id={id}
         sx={{
           width: "100%",
           height: { xs: "90vh", md: "100vh" },
@@ -227,6 +237,7 @@ export default function Herooo() {
             >
               <Button
                 variant="contained"
+                  onClick={handleScrollToContact} 
                 sx={{
                   backgroundColor: "#FFD93D",
                   color: "#000",
@@ -241,21 +252,24 @@ export default function Herooo() {
                 Enroll Now
               </Button>
 
-              <Button
-                variant="outlined"
-                sx={{
-                  borderColor: "#fff",
-                  color: "#fff",
-                  borderRadius: "25px",
-                  px: 4,
-                  "&:hover": {
-                    borderColor: "#FFD93D",
-                    color: "#FFD93D",
-                  },
-                }}
-              >
-                Explore Programs
-              </Button>
+      <Button
+  component="a"                 // 👈 makes it a download link
+  href={Brochure}               // 👈 file path
+  download="Dnyanda-Brochure"   // 👈 file name
+  variant="outlined"
+  sx={{
+    borderColor: "#fff",
+    color: "#fff",
+    borderRadius: "25px",
+    px: 4,
+    "&:hover": {
+      borderColor: "#FFD93D",
+      color: "#FFD93D",
+    },
+  }}
+>
+  Explore Programs
+</Button>
               <Typography
                 sx={{
                   display: { xs: "block", md: "none" }, // ✅ only mobile

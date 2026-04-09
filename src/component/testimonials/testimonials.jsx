@@ -16,19 +16,19 @@ const testimonials = [
   {
     name: "Priya Sharma",
     review: "Amazing school! My child loves coming here every day.",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
+    
     rating: 5,
   },
   {
     name: "Rahul Patil",
     review: "Very caring teachers and safe environment.",
-    image: "https://randomuser.me/api/portraits/men/2.jpg",
+ 
     rating: 5,
   },
   {
     name: "Sneha Kulkarni",
     review: "Great learning experience with fun activities.",
-    image: "https://randomuser.me/api/portraits/women/3.jpg",
+    
     rating: 4,
   },
 ];

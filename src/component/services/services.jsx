@@ -55,9 +55,10 @@ const services = [
   },
 ];
 
-export default function Services() {
+export default function Services({id}) {
   return (
     <Box
+      id={id}
       sx={{
         py: 10,
         px: 3,
