@@ -3,10 +3,12 @@
 import React from "react";
 import { Box, Typography, Grid, Card, CardContent } from "@mui/material";
 import SecurityIcon from "@mui/icons-material/Security";
-import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import ChildCareIcon from "@mui/icons-material/ChildCare";
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import { motion } from "framer-motion";
+
+import Icon from '@mdi/react';
+import { mdiCctv } from '@mdi/js';
 
 // ✅ Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -22,7 +24,11 @@ import "./saftey.css"; // fix spelling
 const safetyItems = [
   {
     title: "CCTV Monitoring",
-    icon: <CameraAltIcon fontSize="large" />,
+    icon:  <Icon
+        path={mdiCctv}
+        size={1.5}   // adjust size here
+        color="#fff" // important (icon is inside colored circle)
+      />,
     color: "#4CAF50",
   },
   {

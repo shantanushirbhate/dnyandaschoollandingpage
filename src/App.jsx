@@ -9,6 +9,7 @@ import Saftey from "./component/saftey/saftey"
 import Contact from "./component/contactus/contactus"
 import Testimonials from "./component/testimonials/testimonials"
 import Footer from "./component/footer/footer"
+import MobileIcon from "./component/mobileicon/mobileicon"
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
       <Saftey />
       <Contact id="contact" />
       <Testimonials />
-      <Footer/>
+      <Footer />
+      <MobileIcon/>
     </>
   )
 }

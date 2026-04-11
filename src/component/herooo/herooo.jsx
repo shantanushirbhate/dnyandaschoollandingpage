@@ -63,6 +63,7 @@ const ABCDAnimation = () => {
 
 export default function Herooo({id}) {
   const [showWelcome, setShowWelcome] = useState(true);
+  const colors = ["#c20d0d", "#7cc911ab", "#ffff00", "#6167c4", "#ff0000", "#00ff00"];
 
   const handleScrollToContact = () => {
   const section = document.getElementById("contact");
@@ -79,40 +80,59 @@ export default function Herooo({id}) {
 
     return () => clearTimeout(timer);
   }, []);
-
+  const text = "Welcome to Dnyanda Global Preschool";
+  const text1 = "Welcome to";
+const text2 = "Dnyanda Global Preschool";
   return (
     <>
-      {showWelcome && (
+    {showWelcome && (
+  <Box
+    sx={{
+      position: "absolute",
+      inset: 0,
+      left: "60%",
+      zIndex: 5,
+      display: { xs: "none", md: "flex" },
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+  >
+    <Typography
+      sx={{
+        fontSize: { xs: "12px", md: "30px" },
+        fontWeight: "bold",
+        textAlign: "center",
+        textShadow: "5px 5px 40px rgba(0,0,0,0.5)",
+      }}
+    >
+      {text.split("").map((char, i) => (
         <Box
+          key={i}
+          component="span"
           sx={{
-            position: "absolute",
-            inset: 0,
-            left: "60%",
-            zIndex: 5,
-            display: { xs: "none", md: "flex" },
-            alignItems: "center",
-            justifyContent: "center",
-            //   background: "rgba(0,0,0,0.5)",
+            display: "inline-block",
+            opacity: 0,
+
+            // 🎨 Apply your colors
+            color: char === " " ? "transparent" : colors[i % colors.length],
+
+            // ✨ Animations
+            animation: `
+              cartoonBounce 0.6s ease forwards,
+              fadeOut 1s ease 3s forwards
+            `,
+            animationDelay: `${i * 0.05}s`,
+
+            // spacing for spaces
+            mr: char === " " ? 1 : 0,
           }}
         >
-          <Typography
-            sx={{
-              fontSize: { xs: "2px", md: "30px" },
-              fontWeight: "bold",
-              color: "#fff",
-              textAlign: "center",
-              textShadow: "5px 5px 40px rgba(0,0,0,0.5)",
-
-              animation: `
-          cartoonBounce 1s ease,
-          fadeOut 1s ease 2s forwards
-        `,
-            }}
-          >
-             Welcome to <br /> Dnyanda Global Preschool 
-          </Typography>
+          {char}
         </Box>
-      )}
+      ))}
+    </Typography>
+  </Box>
+)}
       <Box id={id}
         sx={{
           width: "100%",
@@ -270,19 +290,44 @@ export default function Herooo({id}) {
 >
   Explore Programs
 </Button>
-              <Typography
-                sx={{
-                  display: { xs: "block", md: "none" }, // ✅ only mobile
-                  mt: 2,
-                  fontSize: "16px",
-                  fontWeight: "bold",
-                  color: "#fff",
-                  textAlign: "center",
-                  animation: "cartoonBounce 1s ease",
-                }}
-              >
-              Welcome to <br /> Dnyanda Global Preschool 
-              </Typography>
+             <Typography
+  sx={{
+    display: { xs: "block", md: "none" }, // mobile only
+    mt: 2,
+    fontSize: "16px",
+    fontWeight: "bold",
+    textAlign: "center",
+    animation: "cartoonBounce 1s ease", // ✅ unchanged
+  }}
+>
+  {/* Line 1 */}
+  {text1.split("").map((char, i) => (
+    <Box
+      key={i}
+      component="span"
+      sx={{
+        color: colors[i % colors.length],
+      }}
+    >
+      {char === " " ? "\u00A0" : char}
+    </Box>
+  ))}
+
+  <br />
+
+  {/* Line 2 */}
+  {text2.split("").map((char, i) => (
+    <Box
+      key={i}
+      component="span"
+      sx={{
+        color: colors[(i + text1.length) % colors.length],
+      }}
+    >
+      {char === " " ? "\u00A0" : char}
+    </Box>
+  ))}
+</Typography>
             </Box>
                   </Box>
                 

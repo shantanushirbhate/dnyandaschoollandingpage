@@ -11,7 +11,7 @@ import Logo from "../../assets/schoollogo.png";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
-  const colors = ["#c20d0d", "#ff7f00", "#ffff00", "#00ff00"];
+  const colors = ["#c20d0d", "#7cc911ab", "#ffff00", "#6167c4","#ff0000","#00ff00"];
   
  const navItems = [
   { label: "Home", id: "home" },
@@ -34,6 +34,7 @@ const handleScroll = (id) => {
 
   setOpen(false);
 };
+const text = "Dnyanda Global Pre School";
 
   return (
     <>
@@ -66,38 +67,39 @@ const handleScroll = (id) => {
     gap: "5px",
   }}
 >
-{["Dnyanda", "Global", "Pre", "School"].map((word, i) => (
-  <Box
-    key={i}
-    component="span"
-    sx={{
-      opacity: 0,
-      color: colors[i % colors.length],
-      animation: "fadeSlideUp 0.8s ease forwards",
-      animationDelay: `${i * 0.2}s`,
-      fontWeight: "bold",
+<Typography
+  sx={{
+    fontWeight: "bold",
+    display: "flex",
+    flexWrap: "wrap", // ✅ important for mobile
+  }}
+>
+  {text.split("").map((char, i) => (
+    <Box
+      key={i}
+      component="span"
+      sx={{
+        opacity: 0,
+        color: char === " " ? "transparent" : colors[i % colors.length],
+        animation: "fadeSlideUp 0.6s ease forwards",
+        animationDelay: `${i * 0.05}s`,
+        fontWeight: "bold",
 
-      // ✅ Responsive font size
-      fontSize: {
-        xs: "1.2rem",   // mobile
-        sm: "1.5rem",   // small tablets
-        md: "2rem",     // desktop
-        lg: "2.5rem",   // large screens
-      },
+        fontSize: {
+          xs: "1rem",
+          sm: "1.5rem",
+          md: "2rem",
+          lg: "2.5rem",
+        },
 
-      // ✅ Responsive spacing
-      mr: {
-        xs: 0.5,
-        sm: 1,
-      },
-
-      // ✅ Better wrapping on mobile
-      display: "inline-block",
-    }}
-  >
-    {word}
-  </Box>
-))}
+        // spacing for letters
+        mr: char === " " ? 1 : 0,
+      }}
+    >
+      {char}
+    </Box>
+  ))}
+</Typography>
 </Typography>
         </Box>
 
