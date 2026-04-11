@@ -307,6 +307,7 @@ const text2 = "Dnyanda Global Preschool";
       component="span"
       sx={{
         color: colors[i % colors.length],
+        fontSize:"25px"
       }}
     >
       {char === " " ? "\u00A0" : char}
@@ -321,6 +322,8 @@ const text2 = "Dnyanda Global Preschool";
       key={i}
       component="span"
       sx={{
+        fontSize:"25px",
+
         color: colors[(i + text1.length) % colors.length],
       }}
     >
