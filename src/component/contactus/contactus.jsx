@@ -205,7 +205,7 @@ export default function Contact({ id }) {
         >
           <iframe
             title="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.0468444770586!2d77.76162699678952!3d20.969487500000028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a3ecfea05acd%3A0x163a4c0772082218!2sVrindavan%20Colony%20Garden%2C%20Siddhivinayak%20Nagar%2C%20Amravati%20gorle!5e1!3m2!1sen!2sin!4v1775714285119!5m2!1sen!2sin"
+ src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d513.6068113583189!2d77.7661768924825!3d20.970750614782133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1775720241271!5m2!1sen!2sin" 
             width="100%"
             height="100%"
             style={{ border: 0 }}

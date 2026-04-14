@@ -6,7 +6,9 @@ import ChildCareIcon from "@mui/icons-material/ChildCare";
 import SchoolIcon from "@mui/icons-material/School";
 import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; 
+
+import imga from "../../assets/boy.png";
 
 const programs = [
   {
@@ -57,6 +59,27 @@ export default function Programs() {
           d="M0,100L60,120C120,140,240,180,360,170C480,160,600,100,720,80C840,60,960,80,1080,100C1200,120,1320,140,1380,150L1440,160V0H0Z"
         />
       </Box>
+
+      {/* 🌄 Background Image 1 */}
+<Box
+  component={motion.img}
+animate={{ y: [0, -20, 0] }}
+transition={{ duration: 6, repeat: Infinity }}
+  src={imga}
+  alt="bg1"
+  sx={{
+    position: "absolute",
+    top: { xs: "10%", md: "5%" },
+    left: { xs: "30px", md: "25px" },
+    width: { xs: "150px", md: "300px" },
+    opacity: 3,
+    zIndex: 3,
+    filter: "blur(1px)",
+transform: "scale(1.1)",
+  }}
+/>
+
+{/* 🌄 Background Image 2 */}
 
       {/* 🟣 Blob */}
       <Box

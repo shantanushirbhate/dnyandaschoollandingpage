@@ -12,6 +12,8 @@ import SecurityIcon from "@mui/icons-material/Security";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import { motion } from "framer-motion";
 
+
+
 const services = [
   {
     title: "Montessori Learning",
@@ -65,6 +67,7 @@ export default function Services({id}) {
         background: "linear-gradient(135deg, #FFF8E1, #E3F2FD)",
       }}
     >
+      
       {/* Heading */}
       <Typography
         variant="h4"
