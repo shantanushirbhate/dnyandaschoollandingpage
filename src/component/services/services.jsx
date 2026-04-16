@@ -9,7 +9,9 @@ import ComputerIcon from "@mui/icons-material/Computer";
 import PeopleIcon from "@mui/icons-material/People";
 import PersonIcon from "@mui/icons-material/Person";
 import SecurityIcon from "@mui/icons-material/Security";
-import VideocamIcon from "@mui/icons-material/Videocam";
+import Icon from "@mdi/react";
+import { mdiCctv } from "@mdi/js";
+
 import { motion } from "framer-motion";
 
 
@@ -53,7 +55,11 @@ const services = [
   {
     title: "CCTV Monitoring",
     desc: "24/7 surveillance for safety and transparency.",
-    icon: <VideocamIcon sx={{ color: "#FF7043" }} />,
+     icon:  <Icon
+           path={mdiCctv}
+           size={1.5}   // adjust size here
+           color="#645959" // important (icon is inside colored circle)
+         />,
   },
 ];
 
