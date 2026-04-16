@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 
 import { Box, Typography, Button } from "@mui/material";
-import HeroImage from "../../assets/xjyy_c6n5_210617.jpg";
 
-import Brochure from "../../assets/broucher.jpeg"
+import Brochure from "../../assets/broucher.jpeg";
 
-import Boy from "../../assets/boy.png"
-import Girl from "../../assets/girl.png"
+import Boy from "../../assets/boy.png";
+import Girl from "../../assets/girl.png";
 
 import StarIcon from "@mui/icons-material/Star";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
-import { motion } from "framer-motion"; 
-
+import { motion } from "framer-motion";
 
 // 🔹 ABCD Animation (Arrow Function)
 const ABCDAnimation = () => {
@@ -23,7 +21,7 @@ const ABCDAnimation = () => {
     <Box
       sx={{
         display: "flex",
-        gap: { xs: 1, sm: 2 },   // smaller gap on mobile
+        gap: { xs: 1, sm: 2 }, // smaller gap on mobile
         mt: 2,
         justifyContent: { xs: "center", md: "flex-start" },
       }}
@@ -45,9 +43,9 @@ const ABCDAnimation = () => {
 
               // ✅ Responsive font size
               fontSize: {
-                xs: "32px",   // mobile
-                sm: "48px",   // small tablets
-                md: "64px",   // desktop
+                xs: "32px", // mobile
+                sm: "48px", // small tablets
+                md: "64px", // desktop
               },
             }}
           >
@@ -59,84 +57,25 @@ const ABCDAnimation = () => {
   );
 };
 
-
-
-export default function Herooo({id}) {
-  const [showWelcome, setShowWelcome] = useState(true);
-  const colors = ["#c20d0d", "#7cc911ab", "#ffff00", "#6167c4", "#ff0000", "#00ff00"];
+export default function Herooo({ id }) {
+  // const colors = ["#c20d0d", "#7cc911ab", "#ffff00", "#6167c4", "#ff0000", "#00ff00"];
 
   const handleScrollToContact = () => {
-  const section = document.getElementById("contact");
+    const section = document.getElementById("contact");
 
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-};
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowWelcome(false);
-    }, 3000); // 3 seconds
-
-    return () => clearTimeout(timer);
-  }, []);
-  const text = "Welcome to Dnyanda Global Preschool";
-  const text1 = "Welcome to";
-const text2 = "Dnyanda Global Preschool";
   return (
     <>
-    {showWelcome && (
-  <Box
-    sx={{
-      position: "absolute",
-      inset: 0,
-      left: "60%",
-      zIndex: 5,
-      display: { xs: "none", md: "flex" },
-      alignItems: "center",
-      justifyContent: "center",
-    }}
-  >
-    <Typography
-      sx={{
-        fontSize: { xs: "12px", md: "30px" },
-        fontWeight: "bold",
-        textAlign: "center",
-        textShadow: "5px 5px 40px rgba(0,0,0,0.5)",
-      }}
-    >
-      {text.split("").map((char, i) => (
-        <Box
-          key={i}
-          component="span"
-          sx={{
-            display: "inline-block",
-            opacity: 0,
-
-            // 🎨 Apply your colors
-            color: char === " " ? "transparent" : colors[i % colors.length],
-
-            // ✨ Animations
-            animation: `
-              cartoonBounce 0.6s ease forwards,
-              fadeOut 1s ease 3s forwards
-            `,
-            animationDelay: `${i * 0.05}s`,
-
-            // spacing for spaces
-            mr: char === " " ? 1 : 0,
-          }}
-        >
-          {char}
-        </Box>
-      ))}
-    </Typography>
-  </Box>
-)}
-      <Box id={id}
+      <Box
+        id={id}
         sx={{
           width: "100%",
           height: { xs: "90vh", md: "100vh" },
+
           position: "relative",
         }}
       >
@@ -162,7 +101,7 @@ const text2 = "Dnyanda Global Preschool";
           />
 
           {/* Smile */}
-          <EmojiEmotionsIcon
+          {/* <EmojiEmotionsIcon
             sx={{
               position: "absolute",
               top: "80%",
@@ -171,7 +110,7 @@ const text2 = "Dnyanda Global Preschool";
               color: "#FFD93D",
               animation: "float 5s ease-in-out infinite",
             }}
-          />
+          /> */}
 
           {/* Book */}
           <MenuBookIcon
@@ -190,22 +129,83 @@ const text2 = "Dnyanda Global Preschool";
           sx={{
             position: "absolute",
             inset: 0,
-            backgroundImage: `url(${HeroImage})`,
+            // backgroundImage: `url(${HeroImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             zIndex: 1,
           }}
         />
+        {/* Boy Image */}
+        <Box
+          component="img"
+          src={Boy}
+          alt="boy"
+          sx={{
+            position: "absolute",
+            bottom: { xs: "0", md: "0" },
+            left: { xs: "5%", md: "50%" },
+            width: { xs: "120px", md: "220px" },
+            zIndex: 2,
+            animation: "float 4s ease-in-out infinite",
+          }}
+        />
 
-        {/* Overlay */}
+        {/* Girl Image */}
+        <Box
+          component="img"
+          src={Girl}
+          alt="girl"
+          sx={{
+            position: "absolute",
+            bottom: { xs: "0", md: "0" },
+            right: { xs: "5%", md: "10%" },
+            width: { xs: "120px", md: "220px" },
+            zIndex: 2,
+            animation: "float 5s ease-in-out infinite",
+          }}
+        />
+
+        {/* 🎨 Background */}
         <Box
           sx={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5))",
-            zIndex: 2,
+            background: "linear-gradient(135deg, #d2d4a4, #fdfdfd)",
+            zIndex: 0,
           }}
         />
+        <Box
+          sx={{
+            position: "absolute",
+            width: "250px",
+            height: "250px",
+            background: "#BBDEFB",
+            borderRadius: "50% 30% 60% 40%",
+            top: "-80px",
+            // right: "px",
+            opacity: 0.3,
+            zIndex: 1,
+          }}
+        />
+        {/* Overlay */}
+        {/* 🎨 Background Design */}
+        {/* 🌊 Wave Top */}
+        <Box
+          component="svg"
+          viewBox="0 0 1440 200"
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            zIndex: 1,
+          }}
+        >
+          <path
+            fill="#ffffff"
+            d="M0,100L60,120C120,140,240,180,360,170C480,160,600,100,720,80C840,60,960,80,1080,100C1200,120,1320,140,1380,150L1440,160V0H0Z"
+          />
+        </Box>
 
         {/* Content */}
         <Box
@@ -218,13 +218,17 @@ const text2 = "Dnyanda Global Preschool";
             justifyContent: { xs: "center", md: "flex-start" },
             textAlign: { xs: "center", md: "left" },
             px: { xs: 2, md: 8 },
-            color: "#fff",
+
+            // ✅ ADD THIS
+            pt: { xs: 6, md: 0 },
+            pb: { xs: 10, md: 0 }, // space for images
+
+            color: "#333", // since background is light
           }}
-              >
-                  
+        >
           <Box maxWidth="600px">
-                      {/* Heading */}
-                        <ABCDAnimation />
+            {/* Heading */}
+            <ABCDAnimation />
             <Typography
               variant="h3"
               sx={{
@@ -257,13 +261,13 @@ const text2 = "Dnyanda Global Preschool";
             >
               <Button
                 variant="contained"
-                  onClick={handleScrollToContact} 
+                onClick={handleScrollToContact}
                 sx={{
                   backgroundColor: "#FFD93D",
                   color: "#000",
                   fontWeight: "bold",
                   borderRadius: "25px",
-                  px: 4,
+                  mx: { xs: "10px" },
                   "&:hover": {
                     backgroundColor: "#ffcc00",
                   },
@@ -272,69 +276,36 @@ const text2 = "Dnyanda Global Preschool";
                 Enroll Now
               </Button>
 
-      <Button
-  component="a"                 // 👈 makes it a download link
-  href={Brochure}               // 👈 file path
-  download="Dnyanda-Brochure"   // 👈 file name
-  variant="outlined"
-  sx={{
-    borderColor: "#fff",
-    color: "#fff",
-    borderRadius: "25px",
-    px: 4,
-    "&:hover": {
-      borderColor: "#FFD93D",
-      color: "#FFD93D",
-    },
-  }}
->
-  Explore Programs
-</Button>
-             <Typography
-  sx={{
-    display: { xs: "block", md: "none" }, // mobile only
-    mt: 2,
-    fontSize: "16px",
-    fontWeight: "bold",
-    textAlign: "center",
-    animation: "cartoonBounce 1s ease", // ✅ unchanged
-  }}
->
-  {/* Line 1 */}
-  {text1.split("").map((char, i) => (
-    <Box
-      key={i}
-      component="span"
-      sx={{
-        color: colors[i % colors.length],
-        fontSize:"25px"
-      }}
-    >
-      {char === " " ? "\u00A0" : char}
-    </Box>
-  ))}
-
-  <br />
-
-  {/* Line 2 */}
-  {text2.split("").map((char, i) => (
-    <Box
-      key={i}
-      component="span"
-      sx={{
-        fontSize:"25px",
-
-        color: colors[(i + text1.length) % colors.length],
-      }}
-    >
-      {char === " " ? "\u00A0" : char}
-    </Box>
-  ))}
-</Typography>
+              <Button
+                component="a" // 👈 makes it a download link
+                href={Brochure} // 👈 file path
+                download="Dnyanda-Brochure" // 👈 file name
+                variant="outlined"
+                sx={{
+                  borderColor: "#fff",
+                  color: "#060101",
+                  borderRadius: "25px",
+                  px: 4,
+                  "&:hover": {
+                    borderColor: "#cfc196",
+                    color: "#613dff",
+                  },
+                }}
+              >
+                Explore Programs
+              </Button>
+              <Typography
+                sx={{
+                  display: { xs: "block", md: "none" }, // mobile only
+                  mt: 2,
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  textAlign: "center",
+                  animation: "cartoonBounce 1s ease", // ✅ unchanged
+                }}
+              ></Typography>
             </Box>
-                  </Box>
-                
-                
+          </Box>
         </Box>
       </Box>
     </>

@@ -51,9 +51,9 @@ const text = "Dnyanda Global Pre School";
           alignItems: "center",
           justifyContent: "space-between",
           px: { xs: 2, md: 6 },
-          color: "#fff",          // 🔥 visible on image
-          background: "rgba(0,0,0,0.2)", // optional glass effect
-          backdropFilter: "blur(6px)",   // 🔥 glassmorphism
+          color: "#37b629",          // 🔥 visible on image
+          background: "rgb(135, 55, 55)", // optional glass effect
+          // backdropFilter: "blur(2px)",   // 🔥 glassmorphism
         }}
       >
         {/* Logo */}
