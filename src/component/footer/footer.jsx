@@ -15,10 +15,19 @@ export default function Footer() {
       <Grid container spacing={4}>
         {/* ===== About / Logo ===== */}
         <Grid item xs={12} md={4}>
-          <Typography variant="h6" fontWeight="bold" mb={2}>
-            🌟 Dnyanda School
+          <Typography
+            sx={{ fontFamily: "Baloo 2, cursive" }}
+            variant="h6"
+            fontWeight="bold"
+            fontSize="20px"
+            mb={2}
+          >
+            🌟 Dnyanda Global Pre School
           </Typography>
-          <Typography variant="body2" sx={{ opacity: 0.8 }}>
+          <Typography
+            sx={{ fontFamily: "'Baloo 2', cursive", opacity: 0.8 }}
+            variant="body2"
+          >
             Providing quality education with love, care, and safety for every
             child.
           </Typography>
@@ -26,11 +35,21 @@ export default function Footer() {
 
         {/* ===== Quick Links ===== */}
         <Grid item xs={12} md={4}>
-          <Typography variant="h6" fontWeight="bold" mb={2}>
+          <Typography
+            sx={{ fontFamily: "'Baloo 2', cursive" }}
+            variant="h6"
+            fontWeight="bold"
+            mb={2}
+          >
             Quick Links
           </Typography>
 
-          <Box display="flex" flexDirection="column" gap={1}>
+          <Box
+            sx={{ fontFamily: "'Baloo 2', cursive", fontSize: "20px" }}
+            display="flex"
+            flexDirection="column"
+            gap={1}
+          >
             <Link href="#" underline="none" color="inherit">
               Home
             </Link>
@@ -48,23 +67,43 @@ export default function Footer() {
 
         {/* ===== Contact Info ===== */}
         <Grid item xs={12} md={4}>
-          <Typography variant="h6" fontWeight="bold" mb={2}>
+          <Typography
+            sx={{ fontFamily: "'Baloo 2', cursive", fontSize: "20px" }}
+            variant="h6"
+            fontWeight="bold"
+            mb={2}
+          >
             Contact Info
           </Typography>
 
           <Box display="flex" alignItems="center" gap={1} mb={1}>
             <PhoneIcon fontSize="small" />
-            <Typography variant="body2">+91 8408004767</Typography>
+            <Typography
+              sx={{ fontFamily: "'Baloo 2', cursive", fontSize: "20px" }}
+              variant="body2"
+            >
+              +91 8408004767
+            </Typography>
           </Box>
 
           <Box display="flex" alignItems="center" gap={1} mb={1}>
             <EmailIcon fontSize="small" />
-            <Typography variant="body2">dnyanda.contact@gmail.com</Typography>
+            <Typography
+              sx={{ fontFamily: "Baloo 2, cursive", fontSize: "20px" }}
+              variant="body2"
+            >
+              dnyanda.contact@gmail.com
+            </Typography>
           </Box>
 
           <Box display="flex" alignItems="center" gap={1}>
             <LocationOnIcon fontSize="small" />
-            <Typography variant="body2">Chikhli, Maharashtra, India</Typography>
+            <Typography
+              sx={{ fontFamily: "'Baloo 2', cursive", fontSize: "20px" }}
+              variant="body2"
+            >
+              Chikhli, Maharashtra, India
+            </Typography>
           </Box>
 
           {/* Social Icons */}
@@ -101,7 +140,14 @@ export default function Footer() {
         textAlign="center"
         sx={{ borderTop: "1px solid rgba(255,255,255,0.2)" }}
       >
-        <Typography variant="body2" sx={{ opacity: 0.7 }}>
+        <Typography
+          variant="body2"
+          sx={{
+            opacity: 0.7,
+            fontSize: "20px",
+            fontFamily: "'Baloo 2', cursive",
+          }}
+        >
           © {new Date().getFullYear()} Dnyanda School. All rights reserved.
         </Typography>
       </Box>

@@ -44,6 +44,7 @@ export default function Testimonials() {
         fontWeight="bold"
         mb={6}
         color="text.primary"
+        sx={{ fontFamily: "'Baloo 2', cursive",}}
       >
         ⭐ Testimonials
       </Typography>
@@ -84,7 +85,7 @@ export default function Testimonials() {
                 />
 
                 {/* Name */}
-                <Typography variant="h6" fontWeight="bold">
+                <Typography sx={{ fontFamily: "'Baloo 2', cursive",}}  variant="h6" fontWeight="bold">
                   {item.name}
                 </Typography>
 
@@ -96,7 +97,7 @@ export default function Testimonials() {
                 </Box>
 
                 {/* Review */}
-                <Typography variant="body2" color="text.secondary">
+                <Typography sx={{ fontFamily: "'Baloo 2', cursive",}} variant="body2" color="text.secondary">
                   "{item.review}"
                 </Typography>
 

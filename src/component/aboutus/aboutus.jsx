@@ -25,10 +25,12 @@ export default function Aboutus({id}) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           textAlign="center"
-          fontWeight="bold"
           sx={{
-            mb: 5,
-            fontSize: { xs: "1.8rem", md: "2.5rem" },
+           fontFamily: "'Baloo 2', cursive",
+    fontWeight: "bold",
+    fontSize: { xs: "30px", md: "52px" },
+    lineHeight: 1.2,
+    mb: 2,
             color: "#1976D2",
           }}
         >
@@ -45,17 +47,34 @@ export default function Aboutus({id}) {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <Typography fontWeight="bold" variant="h5" mb={2}>
+              <Typography fontWeight="bold"   sx={{
+    fontFamily: "'Baloo 2', cursive",
+    fontWeight: "bold",
+    fontSize: { xs: "25px", md: "25px" },
+  
+  }} variant="h5" mb={2}>
                 Welcome to Our School
               </Typography>
 
-              <Typography color="text.secondary" mb={2}>
+              <Typography   sx={{
+    fontFamily: "'Baloo 2', cursive",
+    
+    fontSize: { xs: "20px", md: "20px" },
+    lineHeight: 1.2,
+    mb: 2,
+  }}  color="text.secondary" mb={2}>
                 We provide a nurturing and inspiring environment where children
                 learn, explore, and grow with confidence. Our approach focuses on
                 developing creativity, independence, and strong values.
               </Typography>
 
-              <Typography color="text.secondary">
+              <Typography  sx={{
+    fontFamily: "'Baloo 2', cursive",
+  
+    fontSize: { xs: "20px", md: "20px" },
+    lineHeight: 1.2,
+    mb: 2,
+  }}  color="text.secondary">
                 With years of experience in early childhood education, we are
                 committed to shaping young minds through innovative and
                 child-friendly teaching methods.
@@ -112,10 +131,10 @@ export default function Aboutus({id}) {
                   boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
                 }}
               >
-                <Typography fontWeight="bold" mb={1}>
+                <Typography  sx={ {fontFamily: "'Baloo 2', cursive"}} fontWeight="bold" mb={1}>
                   {item.title}
                 </Typography>
-                <Typography color="text.secondary">{item.desc}</Typography>
+                <Typography  sx={ {fontFamily: "'Baloo 2', cursive"}} color="text.secondary">{item.desc}</Typography>
               </Box>
             </Grid>
           ))}
@@ -128,6 +147,8 @@ export default function Aboutus({id}) {
             fontWeight="bold"
             variant="h5"
             mb={3}
+             sx={ {fontFamily: "'Baloo 2', cursive"}}
+
           >
             Why Choose Us?
           </Typography>
@@ -155,7 +176,8 @@ export default function Aboutus({id}) {
                     boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
                   }}
                 >
-                  <Typography>{point}</Typography>
+           
+                  <Typography  sx={ {fontFamily: "'Baloo 2', cursive",  fontSize: { xs: "15px", md: "18px" },}} >{point}</Typography>
                 </Box>
               </Grid>
             ))}

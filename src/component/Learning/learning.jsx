@@ -42,9 +42,14 @@ export default function Learning() {
             <Typography
               variant="h4"
               sx={{
-                fontWeight: "bold",
-                fontSize: { xs: "1.6rem", sm: "2rem", md: "2.4rem" },
-                mb: 2,
+                fontFamily: "'Baloo 2', cursive",
+    fontWeight: "bold",
+    fontSize: { xs: "25px", md: "35px" },
+    lineHeight: 1.2,
+    mb: 2,
+              
+          
+      
                 background: "linear-gradient(45deg, #1976d2, #42a5f5)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -55,10 +60,14 @@ export default function Learning() {
 
             <Typography
               sx={{
-                mb: 2,
+                   fontFamily: "'Baloo 2', cursive",
+    fontSize: { xs: "20px", md: "20px" },
+    lineHeight: 1.2,
+    mb: 2,
+              
                 color: "#555",
-                fontSize: { xs: "0.95rem", sm: "1rem" },
-                lineHeight: 1.7,
+            
+                
               }}
             >
               We follow the <b>Montessori Method</b>, where children learn at
@@ -67,10 +76,12 @@ export default function Learning() {
 
             <Typography
               sx={{
-                mb: 2,
+                fontFamily: "'Baloo 2', cursive",
+   fontSize: { xs: "20px", md: "20px" },
+    lineHeight: 1.2,
+    mb: 2,
+              
                 color: "#555",
-                fontSize: { xs: "0.95rem", sm: "1rem" },
-                lineHeight: 1.7,
               }}
             >
               Our <b>activity-based learning</b> makes education fun through
@@ -79,9 +90,12 @@ export default function Learning() {
 
             <Typography
               sx={{
+              fontFamily: "'Baloo 2', cursive",
+    fontSize: { xs: "20px", md: "20px" },
+    lineHeight: 1.2,
+    mb: 2,
+              
                 color: "#555",
-                fontSize: { xs: "0.95rem", sm: "1rem" },
-                lineHeight: 1.7,
               }}
             >
               We focus on <b>holistic child development</b> — building

@@ -8,7 +8,7 @@ import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import { motion } from "framer-motion"; 
 
-import imga from "../../assets/boy.png";
+// import imga from "../../assets/boy.png";
 
 const programs = [
   {
@@ -61,7 +61,7 @@ export default function Programs() {
       </Box>
 
       {/* 🌄 Background Image 1 */}
-<Box
+{/* <Box
   component={motion.img}
 animate={{ y: [0, -20, 0] }}
 transition={{ duration: 6, repeat: Infinity }}
@@ -77,7 +77,7 @@ transition={{ duration: 6, repeat: Infinity }}
     filter: "blur(1px)",
 transform: "scale(1.1)",
   }}
-/>
+/> */}
 
 {/* 🌄 Background Image 2 */}
 
@@ -102,7 +102,11 @@ transform: "scale(1.1)",
         fontWeight="bold"
         color="#1976D2"
         mb={6}
-        sx={{ position: "relative", zIndex: 2 }}
+        sx={{    fontFamily: "'Baloo 2', cursive",
+    fontWeight: "bold",
+    fontSize: { xs: "30px", md: "40px" },
+    lineHeight: 1.2,
+     position: "relative", zIndex: 2 }}
       >
         Our Programs 
       </Typography>
@@ -155,12 +159,23 @@ transform: "scale(1.1)",
             <Box sx={{ mb: 1 }}>{item.icon}</Box>
 
             {/* Title */}
-            <Typography variant="h6" fontWeight="bold" mb={1}>
+            <Typography variant="h6"  sx={{
+    fontFamily: "'Baloo 2', cursive",
+    fontWeight: "bold",
+    fontSize: { xs: "30px", md: "35px" },
+    lineHeight: 1.2,
+  
+  }} mb={1}>
               {item.title}
             </Typography>
 
             {/* Description */}
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2" sx={{
+    fontFamily: "'Baloo 2', cursive",
+    
+    fontSize: { xs: "20px", md: "20px" },
+  
+  }} color="text.secondary">
               {item.desc}
             </Typography>
           </Box>

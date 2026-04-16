@@ -74,7 +74,12 @@ export default function Services({id}) {
         textAlign="center"
         fontWeight="bold"
         color="#1976D2"
-        mb={6}
+    sx={{
+    fontFamily: "'Baloo 2', cursive",
+    fontSize: { xs: "30px", md: "52px" },
+    lineHeight: 1.2,
+    mb: 2,
+  }}
       >
         Our Facilities
       </Typography>
@@ -137,12 +142,24 @@ export default function Services({id}) {
             </Box>
 
             {/* Title */}
-            <Typography variant="h6" fontWeight="bold" mb={1}>
+            <Typography variant="h6" sx={{
+    fontFamily: "'Baloo 2', cursive",
+    fontWeight: "bold",
+    fontSize: { xs: "30px", md: "30px" },
+    lineHeight: 1.2,
+    mb: 2,
+  }} fontWeight="bold" mb={1}>
               {item.title}
             </Typography>
 
             {/* Description */}
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2" sx={{
+    fontFamily: "'Baloo 2', cursive",
+    
+    fontSize: { xs: "20px", md: "20px" },
+    lineHeight: 1.2,
+    mb: 2,
+  }} color="text.secondary">
               {item.desc}
             </Typography>
           </Box>

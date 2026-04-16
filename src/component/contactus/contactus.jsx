@@ -46,6 +46,7 @@ export default function Contact({ id }) {
         textAlign="center"
         mb={6}
         color="text.primary"
+         sx={{   fontFamily: "'Baloo 2', cursive",}}
       >
         📞 Contact Us
       </Typography>
@@ -67,10 +68,10 @@ export default function Contact({ id }) {
             >
               <CardActionArea href="tel:+918408004767">
                 <CardContent sx={{ display: "flex", gap: 2 }}>
-                  <PhoneIcon color="primary" />
+                  <PhoneIcon  color="primary" />
                   <Box>
-                    <Typography fontWeight="bold">Phone</Typography>
-                    <Typography>+91 8408004767</Typography>
+                    <Typography  sx={{  fontSize:"18px",  fontFamily: "'Baloo 2', cursive",}} fontWeight="bold">Phone</Typography>
+                    <Typography  sx={{ fontSize:"18px",  fontFamily: "'Baloo 2', cursive",}}  >+91 8408004767</Typography>
                   </Box>
                 </CardContent>
               </CardActionArea>
@@ -91,8 +92,8 @@ export default function Contact({ id }) {
                 <CardContent sx={{ display: "flex", gap: 2 }}>
                   <EmailIcon color="primary" />
                   <Box>
-                    <Typography fontWeight="bold">Email</Typography>
-                    <Typography>dnyanda.contact@gmail.com</Typography>
+                    <Typography  sx={{  fontSize:"18px",  fontFamily: "'Baloo 2', cursive",}} fontWeight="bold">Email</Typography>
+                    <Typography  sx={{  fontSize:"18px",  fontFamily: "'Baloo 2', cursive",}} >dnyanda.contact@gmail.com</Typography>
                   </Box>
                 </CardContent>
               </CardActionArea>
@@ -112,8 +113,8 @@ export default function Contact({ id }) {
               <CardContent sx={{ display: "flex", gap: 2 }}>
                 <LocationOnIcon color="primary" />
                 <Box>
-                  <Typography fontWeight="bold">Address</Typography>
-                  <Typography>
+                  <Typography  sx={{  fontSize:"18px",  fontFamily: "'Baloo 2', cursive",}} fontWeight="bold">Address</Typography>
+                  <Typography  sx={{  fontSize:"18px",  fontFamily: "'Baloo 2', cursive",}} >
                     Vrundavan Colony, Siddhivinayak Nagar, Shegaon Rahatgaon
                     Road, Amravati
                   </Typography>
@@ -132,13 +133,14 @@ export default function Contact({ id }) {
             transition={{ duration: 0.6 }}
           >
             <Card sx={{ p: 4, borderRadius: "20px" }}>
-              <Typography variant="h6" mb={3} fontWeight="bold">
+              <Typography  sx={{  fontSize:"20px",  fontFamily: "'Baloo 2', cursive",}} variant="h6" mb={3} fontWeight="bold">
                 Send Message
               </Typography>
 
               <Grid container spacing={2}>
                 <Grid item xs={12}>
                   <TextField
+                     sx={{  fontSize:"10px",  fontFamily: "'Baloo 2', cursive",}}
                     fullWidth
                     label="Name"
                     name="name"
@@ -149,6 +151,7 @@ export default function Contact({ id }) {
 
                 <Grid item xs={12}>
                   <TextField
+                        sx={{  fontSize:"10px",  fontFamily: "'Baloo 2', cursive",}}
                     fullWidth
                     label="Phone"
                     name="phone"
@@ -159,6 +162,7 @@ export default function Contact({ id }) {
 
                 <Grid item xs={12}>
                   <TextField
+                       sx={{  fontSize:"10px",  fontFamily: "'Baloo 2', cursive",}}
                     fullWidth
                     label="Message"
                     name="message"
@@ -178,6 +182,8 @@ export default function Contact({ id }) {
                     sx={{
                       borderRadius: "10px",
                       py: 1.5,
+                        fontFamily: "'Poppins', sans-serif",
+  fontWeight: 600,
                     }}
                   >
                     Send Message
@@ -191,7 +197,7 @@ export default function Contact({ id }) {
 
       {/* ===== Google Map ===== */}
       <Box mt={8}>
-        <Typography variant="h5" textAlign="center" fontWeight="bold" mb={3}>
+        <Typography sx={{  fontSize:"25px",  fontFamily: "'Baloo 2', cursive",}} variant="h5" textAlign="center" fontWeight="bold" mb={3}>
           📍 Find Us Here
         </Typography>
 

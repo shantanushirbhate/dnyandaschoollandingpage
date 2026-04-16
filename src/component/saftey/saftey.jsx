@@ -61,7 +61,7 @@ export default function Safety() {
     <Box sx={{ py: 8, px: 3, background: "#f9fbfd" }}>
       
       {/* ===== Safety Section ===== */}
-      <Typography variant="h4" fontWeight="bold" textAlign="center" mb={5}>
+      <Typography variant="h4"  sx={{   fontFamily: "'Baloo 2', cursive",}} fontWeight="bold" textAlign="center" mb={5}>
         🛡️ Safety & Care
       </Typography>
 
@@ -105,7 +105,7 @@ export default function Safety() {
                     {item.icon}
                   </Box>
 
-                  <Typography variant="h6" fontWeight="bold">
+                  <Typography variant="h6" sx={{   fontFamily: "'Baloo 2', cursive",}} fontWeight="bold">
                     {item.title}
                   </Typography>
                 </CardContent>
@@ -116,7 +116,7 @@ export default function Safety() {
       </Grid>
 
       {/* ===== Gallery Section ===== */}
-      <Typography variant="h4" fontWeight="bold" textAlign="center" mt={10} mb={5}>
+      <Typography variant="h4"  sx={{   fontFamily: "'Baloo 2', cursive",}} fontWeight="bold" textAlign="center" mt={10} mb={5}>
         📸 Our Gallery
       </Typography>
 

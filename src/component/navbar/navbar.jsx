@@ -51,7 +51,7 @@ const text = "Dnyanda Global Pre School";
           alignItems: "center",
           justifyContent: "space-between",
           px: { xs: 2, md: 6 },
-          color: "#37b629",          // 🔥 visible on image
+          color: "#ffffff",          // 🔥 visible on image
           background: "rgb(135, 55, 55)", // optional glass effect
           // backdropFilter: "blur(2px)",   // 🔥 glassmorphism
         }}
@@ -84,7 +84,7 @@ const text = "Dnyanda Global Pre School";
         animation: "fadeSlideUp 0.6s ease forwards",
         animationDelay: `${i * 0.05}s`,
         fontWeight: "bold",
-
+  fontFamily: "'Baloo 2', cursive",
         fontSize: {
           xs: "1rem",
           sm: "1.5rem",
@@ -118,6 +118,11 @@ const text = "Dnyanda Global Pre School";
     sx={{
       cursor: "pointer",
       "&:hover": { color: "#FFD93D" },
+      fontFamily: "'Baloo 2', cursive",
+      fontWeight: "bold",
+      fontSize: { xs: "30px", md: "25px" },
+              lineHeight: 1,
+    
     }}
   >
     {item.label}
@@ -128,6 +133,8 @@ const text = "Dnyanda Global Pre School";
               onClick={() => handleScroll("contact")}   
             variant="contained"
             sx={{
+               fontFamily: "'Poppins', sans-serif",
+  
               backgroundColor: "#FFD93D",
               color: "#000",
               fontWeight: "bold",
