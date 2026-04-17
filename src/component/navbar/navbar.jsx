@@ -11,7 +11,7 @@ import Logo from "../../assets/schoollogo.png";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
-  const colors = ["#c20d0d", "#7cc911ab", "#ffff00", "#6167c4","#ff0000","#00ff00"];
+  const colors = ["#d5e1b3", "#7cc911ab", "#ffff00", "#aaf922","#d5c2c2","#00ff00"];
   
  const navItems = [
   { label: "Home", id: "home" },
