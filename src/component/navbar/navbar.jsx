@@ -52,8 +52,8 @@ const text = "Dnyanda Global Pre School";
           justifyContent: "space-between",
           px: { xs: 2, md: 6 },
           color: "#ffffff",          // 🔥 visible on image
-          background: "rgb(135, 55, 55)", // optional glass effect
-          // backdropFilter: "blur(2px)",   // 🔥 glassmorphism
+          background: "rgb(111, 78, 188)", // optional glass effect
+          backdropFilter: "blur(20px)",   // 🔥 glassmorphism
         }}
       >
         {/* Logo */}

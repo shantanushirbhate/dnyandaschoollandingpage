@@ -70,7 +70,7 @@ export default function Herooo({ id }) {
 
         // 🎨 Clean Gradient Background
         background:
-          "linear-gradient(135deg, #E3F2FD 0%, #FFF8E1 50%, #E8F5E9 100%)",
+          "linear-gradient(135deg, #1710ad 0%, #423e2f 50%, #1e8b27 100%)",
       }}
     >
       {/* 🌈 Soft Circle Background */}
@@ -79,7 +79,7 @@ export default function Herooo({ id }) {
           position: "absolute",
           width: 300,
           height: 300,
-          background: "#90CAF9",
+          background: "#73f707",
           borderRadius: "50%",
           top: "-80px",
           right: "-80px",
@@ -93,7 +93,7 @@ export default function Herooo({ id }) {
           position: "absolute",
           width: 250,
           height: 250,
-          background: "#FFE082",
+          background: "#ffff40",
           borderRadius: "50%",
           bottom: "-100px",
           left: "-80px",
@@ -154,7 +154,8 @@ export default function Herooo({ id }) {
             fontSize: { xs: "28px", md: "48px" },
             lineHeight: 1.2,
             mb: 2,
-              fontFamily: "'Baloo 2', cursive",
+            fontFamily: "'Baloo 2', cursive",
+              color:"#fff"
           }}
         >
           Building Bright Futures for Your Child
@@ -164,7 +165,7 @@ export default function Herooo({ id }) {
         <Typography
           sx={{
             fontSize: { xs: "16px", md: "18px" },
-            color: "#555",
+            color: "#ffffff",
             mb: 3,
               fontFamily: "'Baloo 2', cursive",
           }}
