@@ -3,76 +3,119 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
-
+import SunImage from "../../assets/sunimage.png"
 import Brochure from "../../assets/broucher.jpeg";
-import Boy from "../../assets/boy.png";
-import Girl from "../../assets/girl.png";
+import KidsImage from "../../assets/cartoongrass 1.png"
+import AbcdKids from "../../assets/pngtree-childrens-playing-with-abc-alphabets-png-image_15824884-removebg-preview 1.png"
+
+
 
 export default function Herooo({ id }) {
   const handleScrollToContact = () => {
     const section = document.getElementById("contact");
     if (section) section.scrollIntoView({ behavior: "smooth" });
   };
-  const ABCDAnimation = () => {
-    const letters = ["A", "B", "C", "D"];
-    const colors = ["#FF6B6B", "#4ECDC4", "#FFD93D", "#6C5CE7"];
-
-    return (
-      <Box
-        sx={{
-          display: "flex",
-          gap: { xs: 1, sm: 2 },
-          mb: 1,
-          justifyContent: { xs: "center", md: "flex-start" },
-        }}
-      >
-        {letters.map((letter, index) => (
-          <motion.div
-            key={index}
-            animate={{ y: [0, -12, 0] }}
-            transition={{
-              duration: 1.2,
-              repeat: Infinity,
-              delay: index * 0.2,
-            }}
-          >
-            <Typography
-              sx={{
-                fontFamily: "'Baloo 2', cursive",
-                fontWeight: "bold",
-                fontSize: { xs: "30px", md: "52px" },
-                lineHeight: 1.2,
-                mb: 2,
-
-                color: colors[index],
-              }}
-            >
-              {letter}
-            </Typography>
-          </motion.div>
-        ))}
-      </Box>
-    );
-  };
+const ABCDAnimation = () => {
+  const words = ["Dnyanda", "Global", "Pre", "School"];
+  const colors = ["#FF6B6B", "#4ECDC4", "#FFD93D", "#6C5CE7"];
 
   return (
     <Box
-      id={id}
       sx={{
-        fontFamily: "'Poppins', sans-serif",
-        minHeight: "100vh",
         display: "flex",
-        alignItems: "center",
-        px: { xs: 2, md: 8 },
-        py: { xs: 6, md: 0 },
-        position: "relative",
-        overflow: "hidden",
-
-        // 🎨 Clean Gradient Background
-        background:
-          "linear-gradient(135deg, #1710ad 0%, #423e2f 50%, #1e8b27 100%)",
+        flexWrap: "wrap", // ✅ important for mobile
+        gap: { xs: 1, sm: 2 },
+        mb: 1.5,
+        justifyContent: { xs: "center", md: "flex-start" },
       }}
     >
+      {words.map((word, index) => (
+        <motion.div
+          key={index}
+          initial={{ y: 0 }}
+          animate={{ y: [0, -8, 0] }} // ✅ softer animation
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            repeatDelay: 1, // ✅ pause between loops
+            delay: index * 0.3, // ✅ staggered effect
+            ease: "easeInOut",
+          }}
+        >
+          <Typography
+            sx={{
+              fontFamily: "'Baloo 2', cursive",
+              fontWeight: "bold",
+              fontSize: {
+                xs: "20px",   // ✅ smaller for mobile
+                sm: "28px",
+                md: "48px",
+              },
+              lineHeight: 1.2,
+              color: colors[index],
+              whiteSpace: "nowrap", // ✅ keeps words intact
+            }}
+          >
+            {word}
+          </Typography>
+        </motion.div>
+      ))}
+    </Box>
+  );
+};
+
+  return (
+<Box
+  id={id}
+  sx={{
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    px: { xs: 2, md: 8 },
+    py: { xs: 6, md: 0 },
+    position: "relative",
+    overflow: "hidden",
+    fontFamily: "'Poppins', sans-serif",
+
+    // 📱 Responsive background
+    backgroundImage: `url(${KidsImage})`,
+    backgroundRepeat: "no-repeat",
+
+    backgroundSize: {
+      xs: "cover",   // mobile fills screen
+      md: "cover",   // desktop also cover
+    },
+
+    backgroundPosition: {
+      xs: "center top", // mobile focuses top (faces usually appear here)
+      md: "center",     // desktop center
+    },
+  }}
+    >
+<Box
+  component={motion.img}
+  src={AbcdKids}
+  alt="abcd kids"
+  sx={{
+    position: "absolute",
+    right: { xs: "50%", sm: "10%", md: "2%" },
+    transform: { xs: "translateX(50%)", sm: "none" },
+    bottom: { xs: "-20px", sm: "-10px", md: "0" },
+
+    // 🔥 increased size properly for all devices
+    width: {
+      xs: "240px",   // mobile (bigger impact)
+      sm: "320px",   // tablet
+      md: "420px",   // desktop
+    },
+
+    height: "auto",
+
+    zIndex: 2,
+    pointerEvents: "none",
+  }}
+ 
+/>
       {/* 🌈 Soft Circle Background */}
       <Box
         sx={{
@@ -102,7 +145,7 @@ export default function Herooo({ id }) {
       />
 
       {/* 👦👧 Images Section */}
-      <Box
+      {/* <Box
         sx={{
           position: "absolute",
           bottom: 0,
@@ -132,7 +175,45 @@ export default function Herooo({ id }) {
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 5, repeat: Infinity }}
         />
-      </Box>
+      </Box> */}
+
+      {/* 🌤️ Floating Decorative Images */}
+<Box
+  sx={{
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    top: 0,
+    left: 0,
+    zIndex: 1,
+    pointerEvents: "none",
+  }}
+/>
+
+
+
+ <motion.img
+  src={SunImage}
+  alt="sun"
+  style={{
+    position: "absolute",
+    top: "120px",
+    left: "60px",
+    width: "clamp(90px, 8vw, 100px)",
+    zIndex: 2,
+    filter: "drop-shadow(0 0 10px rgba(255, 223, 0, 0.7))",
+  }}
+  animate={{
+    y: [0, -12, 0],
+  }}
+  transition={{
+    duration: 2.5,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+/>
+
+
 
       {/* 📦 Content */}
 
@@ -144,8 +225,13 @@ export default function Herooo({ id }) {
           mx: { xs: "auto", md: 0 },
         }}
       >
+    
         {/* 🔤 ABCD Animation */}
-        <ABCDAnimation />
+       <Box>
+          <ABCDAnimation />
+          {/* 👦 Kids Image Bottom Right */}
+
+</Box>
 
         {/* 🧠 Heading */}
         <Typography
@@ -155,7 +241,7 @@ export default function Herooo({ id }) {
             lineHeight: 1.2,
             mb: 2,
             fontFamily: "'Baloo 2', cursive",
-              color:"#fff"
+              color:"#000000"
           }}
         >
           Building Bright Futures for Your Child
@@ -165,7 +251,7 @@ export default function Herooo({ id }) {
         <Typography
           sx={{
             fontSize: { xs: "16px", md: "18px" },
-            color: "#ffffff",
+            color: "#030202",
             mb: 3,
               fontFamily: "'Baloo 2', cursive",
           }}
@@ -214,7 +300,12 @@ export default function Herooo({ id }) {
             Explore Programs
           </Button>
         </Box>
+        {/* 🌿 Grass Bottom Image */}
+{/* 🌿 Grass Bottom Image */}
+
       </Box>
-    </Box>
+      
+      </Box>
+    
   );
 }

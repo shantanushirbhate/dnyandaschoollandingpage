@@ -8,10 +8,11 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "../../assets/schoollogo.png";
+import LogoName from "../../assets/sxhoolname.png"
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
-  const colors = ["#d5e1b3", "#7cc911ab", "#ffff00", "#aaf922","#d5c2c2","#00ff00"];
+  // const colors = ["#d5e1b3", "#7cc911ab", "#ffff00", "#aaf922","#d5c2c2","#00ff00"];
   
  const navItems = [
   { label: "Home", id: "home" },
@@ -34,7 +35,7 @@ const handleScroll = (id) => {
 
   setOpen(false);
 };
-const text = "Dnyanda Global Pre School";
+// const text = "Dnyanda Global Pre School";
 
   return (
     <>
@@ -66,7 +67,16 @@ const text = "Dnyanda Global Pre School";
     display: "flex",
     gap: "5px",
   }}
->
+          >
+            <Box
+  component="img"
+  src={LogoName}
+  alt="logo name"
+  sx={{
+    height: { xs: "100px", md: "150px" },
+    objectFit: "contain",
+  }}
+/>
 <Typography
   sx={{
     fontWeight: "bold",
@@ -74,7 +84,7 @@ const text = "Dnyanda Global Pre School";
     flexWrap: "wrap", // ✅ important for mobile
   }}
 >
-  {text.split("").map((char, i) => (
+  {/* {text.split("").map((char, i) => (
     <Box
       key={i}
       component="span"
@@ -86,7 +96,7 @@ const text = "Dnyanda Global Pre School";
         fontWeight: "bold",
   fontFamily: "'Baloo 2', cursive",
         fontSize: {
-          xs: "1rem",
+          xs: "1.3rem",
           sm: "1.5rem",
           md: "2rem",
           lg: "2.5rem",
@@ -98,7 +108,8 @@ const text = "Dnyanda Global Pre School";
     >
       {char}
     </Box>
-  ))}
+  ))} */}
+              
 </Typography>
 </Typography>
         </Box>
