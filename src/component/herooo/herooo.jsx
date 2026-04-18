@@ -5,8 +5,8 @@ import { Box, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import SunImage from "../../assets/sunimage.png"
 import Brochure from "../../assets/broucher.jpeg";
-import KidsImage from "../../assets/cartoongrass 1.png"
-import AbcdKids from "../../assets/pngtree-childrens-playing-with-abc-alphabets-png-image_15824884-removebg-preview 1.png"
+// import KidsImage from "../../assets/cartoongrass 1.png"
+import AbcdKids from "../../assets/kidsplaying.png"
 
 
 
@@ -77,21 +77,9 @@ const ABCDAnimation = () => {
     overflow: "hidden",
     fontFamily: "'Poppins', sans-serif",
 
-    // 📱 Responsive background
-    backgroundImage: `url(${KidsImage})`,
-    backgroundRepeat: "no-repeat",
-
-    backgroundSize: {
-      xs: "cover",   // mobile fills screen
-      md: "cover",   // desktop also cover
-    },
-
-    backgroundPosition: {
-      xs: "center top", // mobile focuses top (faces usually appear here)
-      md: "center",     // desktop center
-    },
+   background: "linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)",
   }}
-    >
+>
 <Box
   component={motion.img}
   src={AbcdKids}
@@ -104,9 +92,9 @@ const ABCDAnimation = () => {
 
     // 🔥 increased size properly for all devices
     width: {
-      xs: "240px",   // mobile (bigger impact)
+      xs: "340px",   // mobile (bigger impact)
       sm: "320px",   // tablet
-      md: "420px",   // desktop
+      md: "750px",   // desktop
     },
 
     height: "auto",
