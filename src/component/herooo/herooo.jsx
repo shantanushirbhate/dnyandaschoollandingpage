@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import SunImage from "../../assets/sunimage.png"
 import Brochure from "../../assets/broucher.jpeg";
 // import KidsImage from "../../assets/cartoongrass 1.png"
-import AbcdKids from "../../assets/kidsplaying.png"
+import AbcdKids from "../../assets/—Pngtree—kids playing in playschool 3d_14552964.png"
 
 
 
@@ -92,7 +92,7 @@ const ABCDAnimation = () => {
 
     // 🔥 increased size properly for all devices
     width: {
-      xs: "340px",   // mobile (bigger impact)
+      xs: "300px",   // mobile (bigger impact)
       sm: "320px",   // tablet
       md: "750px",   // desktop
     },
