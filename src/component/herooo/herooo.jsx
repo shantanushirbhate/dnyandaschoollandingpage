@@ -6,7 +6,10 @@ import { motion } from "framer-motion";
 import SunImage from "../../assets/sunimage.png"
 import Brochure from "../../assets/broucher.jpeg";
 // import KidsImage from "../../assets/cartoongrass 1.png"
-import AbcdKids from "../../assets/—Pngtree—kids playing in playschool 3d_14552964.png"
+import AbcdKids from "../../assets/childadded.png"
+import MobileImage from "../../assets/mobile.png"
+import LogoImageHero from "../../assets/sxhoolname.png"
+
 
 
 
@@ -77,35 +80,24 @@ const ABCDAnimation = () => {
     overflow: "hidden",
     fontFamily: "'Poppins', sans-serif",
 
-   background: "linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)",
-  }}
->
-<Box
-  component={motion.img}
-  src={AbcdKids}
-  alt="abcd kids"
-  sx={{
-    position: "absolute",
-    right: { xs: "50%", sm: "10%", md: "2%" },
-    transform: { xs: "translateX(50%)", sm: "none" },
-    bottom: { xs: "-20px", sm: "-10px", md: "0" },
-
-    // 🔥 increased size properly for all devices
-    width: {
-      xs: "300px",   // mobile (bigger impact)
-      sm: "320px",   // tablet
-      md: "750px",   // desktop
+    // ✅ Responsive background image
+    backgroundImage: {
+      xs: `url(${MobileImage})`,   // 📱 mobile
+      sm: `url(${AbcdKids})`,      // 💻 tablet+
+      md: `url(${AbcdKids})`,
     },
 
-    height: "auto",
-
-    zIndex: 2,
-    pointerEvents: "none",
+    backgroundSize: "cover",
+    backgroundPosition: {
+      xs: "center bottom",   // better for mobile layout
+      md: "right center",
+    },
+    backgroundRepeat: "no-repeat",
   }}
- 
-/>
+>
+
       {/* 🌈 Soft Circle Background */}
-      <Box
+      {/* <Box
         sx={{
           position: "absolute",
           width: 300,
@@ -116,10 +108,10 @@ const ABCDAnimation = () => {
           right: "-80px",
           opacity: 0.3,
         }}
-      />
+      /> */}
 
       {/* 🌈 Bottom Circle */}
-      <Box
+      {/* <Box
         sx={{
           position: "absolute",
           width: 250,
@@ -130,7 +122,7 @@ const ABCDAnimation = () => {
           left: "-80px",
           opacity: 0.3,
         }}
-      />
+      /> */}
 
       {/* 👦👧 Images Section */}
       {/* <Box
@@ -180,118 +172,121 @@ const ABCDAnimation = () => {
 
 
 
- <motion.img
-  src={SunImage}
-  alt="sun"
-  style={{
-    position: "absolute",
-    top: "120px",
-    left: "60px",
-    width: "clamp(90px, 8vw, 100px)",
-    zIndex: 2,
-    filter: "drop-shadow(0 0 10px rgba(255, 223, 0, 0.7))",
-  }}
-  animate={{
-    y: [0, -12, 0],
-  }}
-  transition={{
-    duration: 2.5,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
-/>
+
 
 
 
       {/* 📦 Content */}
 
-      <Box
-        sx={{
-          maxWidth: "600px",
-          zIndex: 3,
-          textAlign: { xs: "center", md: "left" },
-          mx: { xs: "auto", md: 0 },
-        }}
-      >
-    
-        {/* 🔤 ABCD Animation */}
-       <Box>
-          <ABCDAnimation />
-          {/* 👦 Kids Image Bottom Right */}
+    <Box
+  sx={{
+    maxWidth: "600px",
+    zIndex: 3,
+    textAlign: "center",   // ✅ always center
+    mx: "auto",            // ✅ center horizontally
+  }}
+>
+  {/* 🔤 ABCD Animation */}
+<Box
+   sx={{
+    display: "flex",
+    justifyContent: "center",
+    mb: 2,
 
+    // ✅ responsive sizing
+    "& img": {
+      width: {
+        xs: "220px",   // 📱 mobile (bigger)
+        sm: "300px",   // 📱 tablet
+        md: "420px",   // 💻 desktop
+        lg: "500px",   // 🖥️ large screen
+      },
+    },
+  }}
+>
+  <motion.img
+    src={LogoImageHero}
+    alt="School Logo"
+    style={{
+      width: "100%",      // let sx control actual size
+      height: "auto",
+      maxWidth: "100%",
+      filter: "drop-shadow(0 4px 10px rgba(0,0,0,0.2))",
+    }}
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+            
+  />
 </Box>
 
-        {/* 🧠 Heading */}
-        <Typography
-          sx={{
-            fontWeight: "bold",
-            fontSize: { xs: "28px", md: "48px" },
-            lineHeight: 1.2,
-            mb: 2,
-            fontFamily: "'Baloo 2', cursive",
-              color:"#000000"
-          }}
-        >
-          Building Bright Futures for Your Child
-        </Typography>
+  {/* 🧠 Heading */}
+  <Typography
+    sx={{
+      fontWeight: "bold",
+      fontSize: { xs: "28px", md: "48px" },
+      lineHeight: 1.2,
+      mb: 2,
+      fontFamily: "'Baloo 2', cursive",
+      color: "#000000",
+    }}
+  >
+    Building Bright Futures for Your Child
+  </Typography>
 
-        {/* 📘 Subheading */}
-        <Typography
-          sx={{
-            fontSize: { xs: "16px", md: "18px" },
-            color: "#030202",
-            mb: 3,
-              fontFamily: "'Baloo 2', cursive",
-          }}
-        >
-          Playgroup • Nursery • Jr. KG • Sr. KG
-        </Typography>
+  {/* 📘 Subheading */}
+  <Typography
+    sx={{
+      fontSize: { xs: "16px", md: "18px" },
+      color: "#030202",
+      mb: 3,
+      fontFamily: "'Baloo 2', cursive",
+    }}
+  >
+    Playgroup • Nursery • Jr. KG • Sr. KG
+  </Typography>
 
-        {/* 🔘 Buttons */}
-        <Box
-          sx={{
-            display: "flex",
-            gap: 2,
-            justifyContent: { xs: "center", md: "flex-start" },
-            flexWrap: "wrap",
-          }}
-        >
-          <Button
-            variant="contained"
-            onClick={handleScrollToContact}
-            sx={{
-              backgroundColor: "#1976D2",
-              borderRadius: "25px",
-              px: 4,
-              
-                fontFamily: "'Poppins', sans-serif",
-  fontWeight: 600,
-            }}
-          >
-            Enroll Now
-          </Button>
+  {/* 🔘 Buttons */}
+  <Box
+    sx={{
+      display: "flex",
+      gap: 2,
+      justifyContent: "center", // ✅ center buttons
+      flexWrap: "wrap",
+    }}
+  >
+    <Button
+      variant="contained"
+      onClick={handleScrollToContact}
+      sx={{
+        backgroundColor: "#1976D2",
+        borderRadius: "25px",
+        px: 4,
+        fontFamily: "'Poppins', sans-serif",
+        fontWeight: 600,
+      }}
+    >
+      Enroll Now
+    </Button>
 
-          <Button
-            component="a"
-            href={Brochure}
-            download="Dnyanda-Brochure"
-            variant="outlined"
-            sx={{
-               fontFamily: "'Poppins', sans-serif",
-  fontWeight: 600,
-              borderRadius: "25px",
-              px: 4,
-              borderColor: "#1976D2",
-              color: "#1976D2",
-            }}
-          >
-            Explore Programs
-          </Button>
-        </Box>
-        {/* 🌿 Grass Bottom Image */}
-{/* 🌿 Grass Bottom Image */}
-
-      </Box>
+    <Button
+      component="a"
+      href={Brochure}
+      download="Dnyanda-Brochure"
+      variant="outlined"
+      sx={{
+        fontFamily: "'Poppins', sans-serif",
+        fontWeight: 600,
+        borderRadius: "25px",
+        px: 4,
+        borderColor: "#1976D2",
+        color: "#1976D2",
+      }}
+    >
+      Explore Programs
+    </Button>
+  </Box>
+</Box>
       
       </Box>
     

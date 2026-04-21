@@ -41,21 +41,31 @@ const handleScroll = (id) => {
     <>
       {/* Navbar */}
       <Box
-        sx={{
-           right: 0,
-          height: "80px",
-          position: "fixed",   // 🔥 makes it overlay Hero
-          top: 0,
-          left: 0,
-          zIndex: 10,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          px: { xs: 2, md: 6 },
-          color: "#ffffff",          // 🔥 visible on image
-          background: "rgb(111, 78, 188)", // optional glass effect
-          backdropFilter: "blur(20px)",   // 🔥 glassmorphism
-        }}
+       sx={{
+    height: "80px",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 10,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    px: { xs: 2, md: 6 },
+
+    color: "#fff",
+
+    // ✅ Transparent with color tint
+    background: "rgba(111, 78, 188, 0.4)",
+
+    // ✅ Glass effect
+    backdropFilter: "blur(12px)",
+    WebkitBackdropFilter: "blur(12px)",
+
+    // optional soft border
+    borderBottom: "1px solid rgba(255,255,255,0.2)",
+  
+  }}
       >
         {/* Logo */}
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
