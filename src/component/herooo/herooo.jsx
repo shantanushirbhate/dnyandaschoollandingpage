@@ -7,7 +7,7 @@ import SunImage from "../../assets/sunimage.png"
 import Brochure from "../../assets/broucher.jpeg";
 // import KidsImage from "../../assets/cartoongrass 1.png"
 import AbcdKids from "../../assets/childadded.png"
-import MobileImage from "../../assets/mobile.png"
+import MobileImage from "../../assets/childadded.png"
 import LogoImageHero from "../../assets/sxhoolname.png"
 
 
