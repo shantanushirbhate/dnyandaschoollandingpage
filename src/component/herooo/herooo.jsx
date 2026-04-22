@@ -22,12 +22,12 @@ export default function Herooo({ id }) {
     typeof window !== "undefined" && window.innerWidth < 768;
 
   // ✅ Parallax values
-  const bgY = useTransform(scrollY, [0, 500], isMobile ? [0, 0] : [0, -80]);
+  // const bgY = useTransform(scrollY, [0, 500], isMobile ? [0, 0] : [0, -80]);
   const contentY = useTransform(scrollY, [0, 500], isMobile ? [0, 0] : [0, -40]);
   // const kidsY = useTransform(scrollY, [0, 500], isMobile ? [0, 0] : [0, -100]);
 
   return (
-    <motion.div style={{ y: bgY }}>
+    <motion.div>
       {/* 🌄 Hero Section */}
       <Box
         id={id}
@@ -179,6 +179,36 @@ export default function Herooo({ id }) {
           </Box>
         </motion.div>
       </Box>
+<Box
+  sx={{
+    position: "absolute",
+    bottom: {
+      xs: "-98px",   // 📱 push up more on mobile
+      sm: "-4px",
+      md: "-45px",   // 💻 normal for desktop
+    },
+    left: 0,
+    width: "100%",
+    zIndex: 3,
+    lineHeight: 0,
+  }}
+>
+  <svg
+    viewBox="0 0 1440 200"
+    preserveAspectRatio="none"
+    style={{
+      width: "100%",
+      height: "clamp(80px, 12vw, 160px)",
+      display: "block",
+    }}
+  >
+    <path
+      d="M0,120 C200,40 400,200 720,120 C1000,60 1200,180 1440,120 L1440,200 L0,200 Z"
+      fill="#ffffff"
+    />
+  </svg>
+</Box>
     </motion.div>
+    
   );
 }

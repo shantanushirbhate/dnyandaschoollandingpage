@@ -82,7 +82,7 @@ transform: "scale(1.1)",
 {/* 🌄 Background Image 2 */}
 
       {/* 🟣 Blob */}
-      <Box
+      {/* <Box
         sx={{
           position: "absolute",
           width: "300px",
@@ -93,7 +93,7 @@ transform: "scale(1.1)",
           right: "-100px",
           opacity: 0.4,
         }}
-      />
+      /> */}
 
       {/* Heading */}
       <Typography
@@ -181,6 +181,8 @@ transform: "scale(1.1)",
           </Box>
         ))}
       </Box>
+      
     </Box>
+    
   );
 }

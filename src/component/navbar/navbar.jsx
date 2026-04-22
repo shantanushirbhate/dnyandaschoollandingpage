@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "../../assets/schoollogo.png";
-import LogoName from "../../assets/sxhoolname.png"
+// import LogoName from "../../assets/sxhoolname.png"
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -59,8 +59,8 @@ const handleScroll = (id) => {
     background: "rgba(111, 78, 188, 0.4)",
 
     // ✅ Glass effect
-    backdropFilter: "blur(12px)",
-    WebkitBackdropFilter: "blur(12px)",
+    // backdropFilter: "blur(4px)",
+    // WebkitBackdropFilter: "blur(12px)",
 
     // optional soft border
     borderBottom: "1px solid rgba(255,255,255,0.2)",
@@ -78,7 +78,7 @@ const handleScroll = (id) => {
     gap: "5px",
   }}
           >
-            <Box
+            {/* <Box
   component="img"
   src={LogoName}
   alt="logo name"
@@ -86,7 +86,7 @@ const handleScroll = (id) => {
     height: { xs: "100px", md: "150px" },
     objectFit: "contain",
   }}
-/>
+/> */}
 <Typography
   sx={{
     fontWeight: "bold",
