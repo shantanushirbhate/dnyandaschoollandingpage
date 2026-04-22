@@ -5,10 +5,9 @@ import { Box, Typography, Button } from "@mui/material";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import Brochure from "../../assets/broucher.jpeg";
-import AbcdKids from "../../assets/childadded.png";
-import MobileImage from "../../assets/childadded.png";
-import LogoImageHero from "../../assets/sxhoolname.png";
+import AbcdKids from "../../assets/New Image.png";
 import BoyImage from "../../assets/boy.png";
+import MobileImage from "../../assets/forMobile.png"
 import GirlImage from "../../assets/girl.png";
 
 export default function Herooo({ id }) {
@@ -25,38 +24,38 @@ export default function Herooo({ id }) {
   // ✅ Parallax values
   const bgY = useTransform(scrollY, [0, 500], isMobile ? [0, 0] : [0, -80]);
   const contentY = useTransform(scrollY, [0, 500], isMobile ? [0, 0] : [0, -40]);
-  const kidsY = useTransform(scrollY, [0, 500], isMobile ? [0, 0] : [0, -100]);
+  // const kidsY = useTransform(scrollY, [0, 500], isMobile ? [0, 0] : [0, -100]);
 
   return (
     <motion.div style={{ y: bgY }}>
       {/* 🌄 Hero Section */}
       <Box
         id={id}
-        sx={{
-          minHeight: "100vh",
-          display: "flex",
-          alignItems: "center",
-          px: { xs: 2, md: 8 },
-          py: { xs: 6, md: 0 },
-          position: "relative",
-          overflow: "hidden",
-          fontFamily: "'Poppins', sans-serif",
+       sx={{
+  minHeight: "100vh",
+  display: "flex",
+  alignItems: "center",
+  px: { xs: 2, md: 8 },
+  py: { xs: 6, md: 0 },
+  position: "relative",
+  overflow: "hidden",
+  fontFamily: "'Poppins', sans-serif",
 
-          backgroundImage: {
-            xs: `url(${MobileImage})`,
-            md: `url(${AbcdKids})`,
-          },
-          backgroundSize: "cover",
-          backgroundPosition: {
-            xs: "center bottom",
-            md: "right center",
-          },
-          backgroundRepeat: "no-repeat",
-        }}
+  // ✅ Responsive images
+  backgroundImage: {
+    xs: `url(${MobileImage})`,
+    md: `url(${AbcdKids})`,
+  },
+
+  // ✅ Best combination
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+}}
       >
 
         {/* 👦👧 Kids (Mobile only + Parallax) */}
-        <motion.div style={{ y: kidsY }}>
+        {/* <motion.div style={{ y: kidsY }}>
           <Box
             sx={{
               position: "absolute",
@@ -80,7 +79,7 @@ export default function Herooo({ id }) {
             
             />
           </Box>
-        </motion.div>
+        </motion.div> */}
 
         {/* 📦 Content with Parallax */}
         <motion.div style={{ y: contentY }}>
@@ -108,22 +107,11 @@ export default function Herooo({ id }) {
                 },
               }}
             >
-              <motion.img
-                src={LogoImageHero}
-                alt="School Logo"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  filter: "drop-shadow(0 4px 10px rgba(0,0,0,0.2))",
-                }}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-              />
+           
             </Box>
 
             {/* 🧠 Heading */}
-            <Typography
+            {/* <Typography
               sx={{
                 fontWeight: "bold",
                 fontSize: { xs: "28px", md: "48px" },
@@ -134,10 +122,10 @@ export default function Herooo({ id }) {
               }}
             >
               Building Bright Futures for Your Child
-            </Typography>
+            </Typography> */}
 
             {/* 📘 Subheading */}
-            <Typography
+            {/* <Typography
               sx={{
                 fontSize: { xs: "16px", md: "18px" },
                 color: "#030202",
@@ -146,7 +134,7 @@ export default function Herooo({ id }) {
               }}
             >
               Playgroup • Nursery • Jr. KG • Sr. KG
-            </Typography>
+            </Typography> */}
 
             {/* 🔘 Buttons */}
             <Box
@@ -155,6 +143,7 @@ export default function Herooo({ id }) {
                 gap: 2,
                 justifyContent: "center",
                 flexWrap: "wrap",
+                marginTop:{xs:"100px" ,md:"500px"}
               }}
             >
               <Button
@@ -165,6 +154,7 @@ export default function Herooo({ id }) {
                   borderRadius: "25px",
                   px: 4,
                   fontWeight: 600,
+              
                 }}
               >
                 Enroll Now
